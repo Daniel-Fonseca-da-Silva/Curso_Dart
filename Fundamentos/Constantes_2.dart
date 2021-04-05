@@ -1,5 +1,3 @@
-import 'dart:io'; // Permite entrada e saída de dados
-
 main() {
 
   const lista = ['Nikolai', 'Vladimir', 'Jhosom'];
