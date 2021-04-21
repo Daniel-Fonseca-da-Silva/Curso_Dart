@@ -4,6 +4,15 @@ class Data {
   int mes;
   int ano;
 
+  // Data(int dia, int mes, int ano) { // Construtor padrão
+  //   this.dia = dia;
+  //   this.mes = mes;
+  //   this.ano = ano;
+  // }
+
+  // Construtor esperto
+  Data([this.dia = 1, this.mes = 1, this.ano = 1980]);
+
   String obterFormatada()
   {
     return '$dia/$mes/$ano';
@@ -17,18 +26,12 @@ class Data {
 }
 
 main() {
-  var dataAniversario = new Data();
-  dataAniversario.dia = 3;
-  dataAniversario.mes = 10;
-  dataAniversario.ano = 2020;
+  var dataAniversario = new Data(3, 10, 2020); // Construtor padrão
 
-  Data dataCompra = Data();
-  dataCompra.dia = 23;
+  Data dataCompra = Data(1, 1, 1980);
+  // dataCompra.dia = 23;
   dataCompra.mes = 12;
   dataCompra.ano = 2021;
-
-  // print("${dataAniversario.dia}/${dataAniversario.mes}/${dataAniversario.ano}");
-  // print("${dataCompra.dia}/${dataCompra.mes}/${dataCompra.ano}");
 
   String d1 = dataAniversario.obterFormatada();
 
@@ -37,5 +40,10 @@ main() {
 
   print(dataCompra);
   print(dataCompra.toString());
+
+  print(new Data());
+  print(new Data(17));
+  print(new Data(17, 11));
+  print(new Data(17, 11, 2021));
 
 }
