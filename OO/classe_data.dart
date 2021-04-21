@@ -13,6 +13,15 @@ class Data {
   // Construtor esperto
   Data([this.dia = 1, this.mes = 1, this.ano = 1980]);
 
+  // Construtor nomeado (Named Constructors)
+  Data.com({this.dia = 1, this.mes = 1, this.ano = 1990});
+
+  // Construtor nomeado com parametro (Named Constructors)
+  Data.ultimoDiaDoAno(int this.ano) {
+    dia = 31;
+    mes = 12;
+  }
+
   String obterFormatada()
   {
     return '$dia/$mes/$ano';
@@ -45,5 +54,12 @@ main() {
   print(new Data(17));
   print(new Data(17, 11));
   print(new Data(17, 11, 2021));
+
+  print(Data.com(ano: 2022));
+
+  var dataFinal = Data.com(dia: 25, mes: 12, ano: 2030);
+  print('A colonizacao de Marte comecara em ${dataFinal}');
+
+  print(Data.ultimoDiaDoAno(3000));
 
 }
