@@ -12,10 +12,12 @@ main() {
   // stdout.write escreve sem quebra de linha
   stdout.write('Informe o valor do raio ');
   var entradaDoUsuario = stdin.readLineSync();
-  final double raio = double.parse(entradaDoUsuario);
+  final double raio = double.parse(entradaDoUsuario.toString());
 
   final area = PI * raio * raio;
 
   print("O valor da area e: " + area.toString());
+
+  return 0;
 
 }

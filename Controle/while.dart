@@ -19,4 +19,6 @@ main() {
     digitado = stdin.readLineSync();
   } while(digitado != 'sair');
 
+  return 0;
+
 }

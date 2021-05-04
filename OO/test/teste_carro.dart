@@ -19,4 +19,6 @@ int main() {
 
   print("O veiculo parou com velocidade ${c1.velocidadeAtual} Km/h.");
 
+  return 0;
+
 }

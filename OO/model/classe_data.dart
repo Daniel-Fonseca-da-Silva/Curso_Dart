@@ -17,7 +17,8 @@ class Data {
   Data.com({this.dia = 1, this.mes = 1, this.ano = 1990});
 
   // Construtor nomeado com parametro (Named Constructors)
-  Data.ultimoDiaDoAno(int this.ano) {
+  Data.ultimoDiaDoAno(int this.ano, int this.mes, int this.dia) {
+    ano = 2025;
     dia = 31;
     mes = 12;
   }
@@ -60,6 +61,8 @@ main() {
   var dataFinal = Data.com(dia: 25, mes: 12, ano: 2030);
   print('A colonizacao de Marte comecara em ${dataFinal}');
 
-  print(Data.ultimoDiaDoAno(3000));
+  print(Data.ultimoDiaDoAno(2035, 25, 02));
+
+  return 0;
 
 }

@@ -22,7 +22,6 @@ class Carro {
   
   int frear()
   {
-    // 202 + 5 >= 203
     if(velocidadeAtual - 5 <= 0)
     {
       velocidadeAtual = 0;
